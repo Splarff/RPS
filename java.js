@@ -51,7 +51,8 @@ function playRound(playerSelection, computerSelection) {
   function game(){
     for (let i = 0; i < 5; i++) {
         if (i === 0){
-            playRound(playerSelection, getComputerChoice())
+            let playerSelection = prompt("Input 'Rock', 'Paper', or 'Scissors'");
+            playRound(playerSelection, getComputerChoice());
             const computerSelection = getComputerChoice();
                 if (playRound(playerSelection, computerSelection) == "You Win!"){
                     playerScore++;
@@ -67,7 +68,8 @@ function playRound(playerSelection, computerSelection) {
                     "Draw";
                 }
         }   else if (i === 1){
-            playRound(playerSelection, getComputerChoice())
+            let playerSelection = prompt("Input 'Rock', 'Paper', or 'Scissors'");
+            playRound(playerSelection, getComputerChoice());
             const computerSelection = getComputerChoice();
                 if (playRound(playerSelection, computerSelection,) == "You Win!"){
                     playerScore++;
@@ -84,7 +86,8 @@ function playRound(playerSelection, computerSelection) {
                 }
 
         }   else if (i === 2){
-            playRound(playerSelection, getComputerChoice())
+            let playerSelection = prompt("Input 'Rock', 'Paper', or 'Scissors'");
+            playRound(playerSelection, getComputerChoice());
             const computerSelection = getComputerChoice();
                 if (playRound(playerSelection, computerSelection) == "You Win!"){
                     playerScore++;
@@ -103,7 +106,8 @@ function playRound(playerSelection, computerSelection) {
                 }
 
         }   else if (i === 3){
-            playRound(playerSelection, getComputerChoice())
+            let playerSelection = prompt("Input 'Rock', 'Paper', or 'Scissors'");
+            playRound(playerSelection, getComputerChoice());
             const computerSelection = getComputerChoice();
                 if (playRound(playerSelection, computerSelection) == "You Win!"){
                     playerScore++;
@@ -120,6 +124,7 @@ function playRound(playerSelection, computerSelection) {
                 }
 
         }    else if (i === 4){
+            let playerSelection = prompt("Input 'Rock', 'Paper', or 'Scissors'");
             playRound(playerSelection, getComputerChoice())
             const computerSelection = getComputerChoice();
                 if (playRound(playerSelection, computerSelection) == "You Win!"){
