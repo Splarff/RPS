@@ -39,8 +39,8 @@ function playRound(playerSelection, computerSelection) {
    
   const playerSelection = "Rock";
   const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection, computerSelection));
-  console.log(playerSelection, computerSelection)
+  //console.log(playRound(playerSelection, computerSelection));
+  //console.log(playerSelection, computerSelection)
 
   // 5 rounds using for loops
   // keep score via 2 variables with "++"
@@ -51,75 +51,102 @@ function playRound(playerSelection, computerSelection) {
   function game(){
     for (let i = 0; i < 5; i++) {
         if (i === 0){
-            playRound(playerSelection, computerSelection)
+            playRound(playerSelection, getComputerChoice())
+            const computerSelection = getComputerChoice();
                 if (playRound(playerSelection, computerSelection) == "You Win!"){
-                    console.log(playerScore + ComputerScore);
-                    return playerScore++;
+                    playerScore++;
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore, "You win this round!");
                 } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
-                    console.log(playerScore + ComputerScore);
-                    return ComputerScore++;
+                    ComputerScore++;
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
                 } else {
-                    console.log(playerScore + ComputerScore);
-                    return "Draw";
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore, "Round Draw");
+                    "Draw";
                 }
         }   else if (i === 1){
-            playRound(playerSelection, computerSelection)
-                if (playRound(playerSelection, computerSelection) == "You Win!"){
-                    console.log(playerScore + ComputerScore);
-                    return playerScore++;
+            playRound(playerSelection, getComputerChoice())
+            const computerSelection = getComputerChoice();
+                if (playRound(playerSelection, computerSelection,) == "You Win!"){
+                    playerScore++;
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore, "You win this round!");
                 } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
-                    console.log(playerScore + ComputerScore);
-                    return ComputerScore++;
+                    ComputerScore++;
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
                 } else {
-                    console.log(playerScore + ComputerScore);
-                   return "Draw";
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore, "Round Draw");
+                   
                 }
 
         }   else if (i === 2){
-            playRound(playerSelection, computerSelection)
+            playRound(playerSelection, getComputerChoice())
+            const computerSelection = getComputerChoice();
                 if (playRound(playerSelection, computerSelection) == "You Win!"){
-                    console.log(playerScore + ComputerScore);
-                    return playerScore++;
+                    playerScore++;
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore,"You win this round!");
                     
                 } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
-                    console.log(playerScore + ComputerScore);
-                    return ComputerScore++;
+                    ComputerScore++;
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
                     
                 } else {
-                    console.log(playerScore + ComputerScore);
-                   return "Draw";
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore, "Round Draw");
+               
                 }
 
         }   else if (i === 3){
-            playRound(playerSelection, computerSelection)
+            playRound(playerSelection, getComputerChoice())
+            const computerSelection = getComputerChoice();
                 if (playRound(playerSelection, computerSelection) == "You Win!"){
-                    console.log(playerScore + ComputerScore);
-                    return playerScore++;
+                    playerScore++;
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore, "You win this round!");
                 } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
-                    console.log(playerScore + ComputerScore);
-                    return ComputerScore++;
+                    ComputerScore++;
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
                 } else {
-                    console.log(playerScore + ComputerScore);
-                    return "Draw";
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore, "Round Draw");
+            
                 }
 
         }    else if (i === 4){
-            playRound(playerSelection, computerSelection)
+            playRound(playerSelection, getComputerChoice())
+            const computerSelection = getComputerChoice();
                 if (playRound(playerSelection, computerSelection) == "You Win!"){
-                    console.log(playerScore + ComputerScore);
-                    return playerScore++;
+                    playerScore++;
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore, "You win this round!");
                 } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
-                    console.log(playerScore + ComputerScore);
-                    return ComputerScore++;
+                    ComputerScore++;
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore);
                 } else {
-                    console.log(playerScore + ComputerScore);
-                   return "Draw";
+                    console.log(computerSelection);
+                    console.log(playerScore, ComputerScore);
+                   
                 }
 
         }   else {
-            console.log(i)
-            return playerScore.toString + ComputerScore.toString;
+            console.log("shit ain't right")
         }
      }
 }
 game()
+console.log("Final Score:",playerScore, "Computer Score:", ComputerScore)
+if (playerScore > ComputerScore){
+    console.log("You WIN!");
+} else if(playerScore == ComputerScore){
+        console.log("Draw...");
+    } else {
+        console.log("You LOSE! HAHA BOZO, FUCKIN LOSER!");
+    }
