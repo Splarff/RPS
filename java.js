@@ -170,4 +170,6 @@ function playRound(playerSelection, computerSelection) {
              console.log("You LOSE! HAHA BOZO, FUCKIN LOSER!");
              document.getElementById("gg").innerHTML = "Final Results: You LOSE! HAHA BOZO, FUCKIN LOSER!";
          }
-    }
+         playerScore -= playerScore
+         ComputerScore -= ComputerScore
+}
