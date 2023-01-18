@@ -58,13 +58,16 @@ function playRound(playerSelection, computerSelection) {
                     playerScore++;
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "You win this round!");
+                    document.getElementById("r1").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". You won this round!";
                 } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
                     ComputerScore++;
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
+                    document.getElementById("r1").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";                
                 } else {
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Round Draw");
+                    document.getElementById("r1").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Round Draw";                    
                     "Draw";
                 }
         }   else if (i === 1){
@@ -75,13 +78,16 @@ function playRound(playerSelection, computerSelection) {
                     playerScore++;
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "You win this round!");
+                    document.getElementById("r2").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". You won this round!";                
                 } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
                     ComputerScore++;
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
+                    document.getElementById("r2").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";                
                 } else {
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Round Draw");
+                    document.getElementById("r2").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Round Draw";
                    
                 }
 
@@ -93,15 +99,18 @@ function playRound(playerSelection, computerSelection) {
                     playerScore++;
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore,"You win this round!");
+                    document.getElementById("r3").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". You won this round!";
                     
                 } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
                     ComputerScore++;
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
+                    document.getElementById("r3").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";
                     
                 } else {
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Round Draw");
+                    document.getElementById("r3").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Round Draw";
                
                 }
 
@@ -113,14 +122,16 @@ function playRound(playerSelection, computerSelection) {
                     playerScore++;
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "You win this round!");
+                    document.getElementById("r4").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". You won this round!";
                 } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
                     ComputerScore++;
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
+                    document.getElementById("r4").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";
                 } else {
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Round Draw");
-            
+                    document.getElementById("r4").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Round Draw";
                 }
 
         }    else if (i === 4){
@@ -131,14 +142,16 @@ function playRound(playerSelection, computerSelection) {
                     playerScore++;
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "You win this round!");
+                    document.getElementById("r5").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". You won this round!";
                 } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
                     ComputerScore++;
                     console.log(computerSelection);
-                    console.log(playerScore, ComputerScore);
+                    console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
+                    document.getElementById("r5").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";
                 } else {
                     console.log(computerSelection);
-                    console.log(playerScore, ComputerScore);
-                   
+                    console.log(playerScore, ComputerScore, "Round Draw");
+                    document.getElementById("r5").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Round Draw";
                 }
 
         }   else {
@@ -150,8 +163,11 @@ game()
 console.log("Final Score:",playerScore, "Computer Score:", ComputerScore)
 if (playerScore > ComputerScore){
     console.log("You WIN!");
+    document.getElementById("gg").innerHTML = "Final Results: You WIN!";
 } else if(playerScore == ComputerScore){
         console.log("Draw...");
+        document.getElementById("gg").innerHTML = "Final Results: You Tied.";
     } else {
         console.log("You LOSE! HAHA BOZO, FUCKIN LOSER!");
+        document.getElementById("gg").innerHTML = "Final Results: You LOSE! HAHA BOZO, FUCKIN LOSER!";
     }
