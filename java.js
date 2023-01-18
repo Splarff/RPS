@@ -158,16 +158,16 @@ function playRound(playerSelection, computerSelection) {
             console.log("shit ain't right")
         }
      }
-}
-game()
-console.log("Final Score:",playerScore, "Computer Score:", ComputerScore)
-if (playerScore > ComputerScore){
-    console.log("You WIN!");
-    document.getElementById("gg").innerHTML = "Final Results: You WIN!";
-} else if(playerScore == ComputerScore){
-        console.log("Draw...");
-        document.getElementById("gg").innerHTML = "Final Results: You Tied.";
-    } else {
-        console.log("You LOSE! HAHA BOZO, FUCKIN LOSER!");
-        document.getElementById("gg").innerHTML = "Final Results: You LOSE! HAHA BOZO, FUCKIN LOSER!";
+
+     console.log("Final Score:",playerScore, "Computer Score:", ComputerScore)
+     if (playerScore > ComputerScore){
+         console.log("You WIN!");
+         document.getElementById("gg").innerHTML = "Final Results: You WIN!";
+     } else if(playerScore == ComputerScore){
+             console.log("Draw...");
+             document.getElementById("gg").innerHTML = "Final Results: You Tied.";
+         } else {
+             console.log("You LOSE! HAHA BOZO, FUCKIN LOSER!");
+             document.getElementById("gg").innerHTML = "Final Results: You LOSE! HAHA BOZO, FUCKIN LOSER!";
+         }
     }
