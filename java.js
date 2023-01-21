@@ -33,7 +33,7 @@ function playRound(playerSelection, computerSelection) {
         return "You Win!";
     }
     else {
-        return "You goofed the code bot";
+        return "Error";
     }
   }
    
@@ -64,7 +64,10 @@ function playRound(playerSelection, computerSelection) {
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
                     document.getElementById("r1").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";                
-                } else {
+                }else if (playRound(playerSelection, computerSelection) == "Error"){
+                    document.getElementById("r1").innerHTML = "Error: '" + playerSelection +"' is not a real option. Point goes to the computer, BOZO!";
+                    ComputerScore++;
+                }else {
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Round Draw");
                     document.getElementById("r1").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Round Draw";                    
@@ -84,7 +87,10 @@ function playRound(playerSelection, computerSelection) {
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
                     document.getElementById("r2").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";                
-                } else {
+                } else if (playRound(playerSelection, computerSelection) == "Error"){
+                    document.getElementById("r2").innerHTML = "Error: '" + playerSelection +"' is not a real option. Point goes to the computer, BOZO!";
+                    ComputerScore++;
+                }else {
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Round Draw");
                     document.getElementById("r2").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Round Draw";
@@ -107,6 +113,9 @@ function playRound(playerSelection, computerSelection) {
                     console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
                     document.getElementById("r3").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";
                     
+                } else if (playRound(playerSelection, computerSelection) == "Error"){
+                    document.getElementById("r3").innerHTML = "Error: '" + playerSelection +"' is not a real option. Point goes to the computer, BOZO!";
+                    ComputerScore++;
                 } else {
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Round Draw");
@@ -128,6 +137,9 @@ function playRound(playerSelection, computerSelection) {
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
                     document.getElementById("r4").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";
+                } else if (playRound(playerSelection, computerSelection) == "Error"){
+                    document.getElementById("r4").innerHTML = "Error: '" + playerSelection +"' is not a real option. Point goes to the computer, BOZO!";
+                    ComputerScore++;
                 } else {
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Round Draw");
@@ -148,6 +160,9 @@ function playRound(playerSelection, computerSelection) {
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
                     document.getElementById("r5").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";
+                } else if (playRound(playerSelection, computerSelection) == "Error"){
+                    document.getElementById("r5").innerHTML = "Error: '" + playerSelection +"' is not a real option. Point goes to the computer, BOZO!";
+                    ComputerScore++;
                 } else {
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Round Draw");
