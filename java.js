@@ -75,10 +75,9 @@ function playRound(playerSelection, computerSelection) {
                 }
 
         }   else {
-            console.log("shit ain't right")
+            console.log("shit ain't right");
         }
      }
-
      console.log("Final Score:",playerScore, "Computer Score:", ComputerScore)
      if (playerScore > ComputerScore){
          console.log("You WIN!");
