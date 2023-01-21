@@ -50,7 +50,7 @@ function playRound(playerSelection, computerSelection) {
 
   function game(){
     for (let i = 0; i < 5; i++) {
-        if (i === 0){
+        if (i === 0 || 1 || 2 || 3 || 4){
             let playerSelection = prompt("Input 'Rock', 'Paper', or 'Scissors'");
             playRound(playerSelection, getComputerChoice());
             const computerSelection = getComputerChoice();
@@ -58,115 +58,20 @@ function playRound(playerSelection, computerSelection) {
                     playerScore++;
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "You win this round!");
-                    document.getElementById("r1").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". You won this round!";
+                    document.getElementById(i).innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". You won this round!";
                 } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
                     ComputerScore++;
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
-                    document.getElementById("r1").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";                
+                    document.getElementById(i).innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";                
                 }else if (playRound(playerSelection, computerSelection) == "Error"){
-                    document.getElementById("r1").innerHTML = "Error: '" + playerSelection +"' is not a real option. Point goes to the computer, BOZO!";
+                    document.getElementById(i).innerHTML = "Error: '" + playerSelection +"' is not a real option. Point goes to the computer, BOZO!";
                     ComputerScore++;
                 }else {
                     console.log(computerSelection);
                     console.log(playerScore, ComputerScore, "Round Draw");
-                    document.getElementById("r1").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Round Draw";                    
+                    document.getElementById(i).innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Round Draw";                    
                     "Draw";
-                }
-        }   else if (i === 1){
-            let playerSelection = prompt("Input 'Rock', 'Paper', or 'Scissors'");
-            playRound(playerSelection, getComputerChoice());
-            const computerSelection = getComputerChoice();
-                if (playRound(playerSelection, computerSelection,) == "You Win!"){
-                    playerScore++;
-                    console.log(computerSelection);
-                    console.log(playerScore, ComputerScore, "You win this round!");
-                    document.getElementById("r2").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". You won this round!";                
-                } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
-                    ComputerScore++;
-                    console.log(computerSelection);
-                    console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
-                    document.getElementById("r2").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";                
-                } else if (playRound(playerSelection, computerSelection) == "Error"){
-                    document.getElementById("r2").innerHTML = "Error: '" + playerSelection +"' is not a real option. Point goes to the computer, BOZO!";
-                    ComputerScore++;
-                }else {
-                    console.log(computerSelection);
-                    console.log(playerScore, ComputerScore, "Round Draw");
-                    document.getElementById("r2").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Round Draw";
-                   
-                }
-
-        }   else if (i === 2){
-            let playerSelection = prompt("Input 'Rock', 'Paper', or 'Scissors'");
-            playRound(playerSelection, getComputerChoice());
-            const computerSelection = getComputerChoice();
-                if (playRound(playerSelection, computerSelection) == "You Win!"){
-                    playerScore++;
-                    console.log(computerSelection);
-                    console.log(playerScore, ComputerScore,"You win this round!");
-                    document.getElementById("r3").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". You won this round!";
-                    
-                } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
-                    ComputerScore++;
-                    console.log(computerSelection);
-                    console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
-                    document.getElementById("r3").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";
-                    
-                } else if (playRound(playerSelection, computerSelection) == "Error"){
-                    document.getElementById("r3").innerHTML = "Error: '" + playerSelection +"' is not a real option. Point goes to the computer, BOZO!";
-                    ComputerScore++;
-                } else {
-                    console.log(computerSelection);
-                    console.log(playerScore, ComputerScore, "Round Draw");
-                    document.getElementById("r3").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Round Draw";
-               
-                }
-
-        }   else if (i === 3){
-            let playerSelection = prompt("Input 'Rock', 'Paper', or 'Scissors'");
-            playRound(playerSelection, getComputerChoice());
-            const computerSelection = getComputerChoice();
-                if (playRound(playerSelection, computerSelection) == "You Win!"){
-                    playerScore++;
-                    console.log(computerSelection);
-                    console.log(playerScore, ComputerScore, "You win this round!");
-                    document.getElementById("r4").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". You won this round!";
-                } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
-                    ComputerScore++;
-                    console.log(computerSelection);
-                    console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
-                    document.getElementById("r4").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";
-                } else if (playRound(playerSelection, computerSelection) == "Error"){
-                    document.getElementById("r4").innerHTML = "Error: '" + playerSelection +"' is not a real option. Point goes to the computer, BOZO!";
-                    ComputerScore++;
-                } else {
-                    console.log(computerSelection);
-                    console.log(playerScore, ComputerScore, "Round Draw");
-                    document.getElementById("r4").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Round Draw";
-                }
-
-        }    else if (i === 4){
-            let playerSelection = prompt("Input 'Rock', 'Paper', or 'Scissors'");
-            playRound(playerSelection, getComputerChoice())
-            const computerSelection = getComputerChoice();
-                if (playRound(playerSelection, computerSelection) == "You Win!"){
-                    playerScore++;
-                    console.log(computerSelection);
-                    console.log(playerScore, ComputerScore, "You win this round!");
-                    document.getElementById("r5").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". You won this round!";
-                } else if (playRound(playerSelection, computerSelection) == "You Lose!"){
-                    ComputerScore++;
-                    console.log(computerSelection);
-                    console.log(playerScore, ComputerScore, "Oh no! LOOOOSERRRRRR... of this round.");
-                    document.getElementById("r5").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Oh no! LOOOOSERRRRRR... of this round.";
-                } else if (playRound(playerSelection, computerSelection) == "Error"){
-                    document.getElementById("r5").innerHTML = "Error: '" + playerSelection +"' is not a real option. Point goes to the computer, BOZO!";
-                    ComputerScore++;
-                } else {
-                    console.log(computerSelection);
-                    console.log(playerScore, ComputerScore, "Round Draw");
-                    document.getElementById("r5").innerHTML = "You chose: " + playerSelection + ". Your opponent chose: " + computerSelection + ". Round Draw";
                 }
 
         }   else {
