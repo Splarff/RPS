@@ -81,12 +81,15 @@ function playRound(playerSelection, computerSelection) {
      console.log("Final Score:",playerScore, "Computer Score:", ComputerScore)
      if (playerScore > ComputerScore){
          console.log("You WIN!");
+         document.getElementById("results").innerHTML = "Final Score: "+playerScore+ "  Computer Score: ", ComputerScore;
          document.getElementById("gg").innerHTML = "Final Results: You WIN!";
      } else if(playerScore == ComputerScore){
              console.log("Draw...");
+             document.getElementById("results").innerHTML = "Final Score: "+playerScore+ "  Computer Score: "+ ComputerScore;
              document.getElementById("gg").innerHTML = "Final Results: You Tied.";
          } else {
              console.log("You LOSE! HAHA BOZO, FUCKIN LOSER!");
+             document.getElementById("results").innerHTML = "Final Score: " + playerScore + "    Computer Score: " + ComputerScore;
              document.getElementById("gg").innerHTML = "Final Results: You LOSE! HAHA BOZO, FUCKIN LOSER!";
          }
          playerScore -= playerScore
